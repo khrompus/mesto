@@ -1,0 +1,11 @@
+.profile__name_button{
+    align-self: center;
+    margin-left: 18px;
+    width: 24px;
+    height: 24px;
+    background:url("../../../../images/Edit.svg");
+    transition: .3s linear;
+}
+.profile__name_button:hover{
+    opacity: 0.6;
+}
