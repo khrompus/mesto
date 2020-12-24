@@ -1,0 +1,12 @@
+.grid__text_button{
+    background: url("../../../../images/Group.svg");
+    width: 21px;
+    height: 21px;
+    background-repeat: no-repeat;
+    align-self: center;
+    margin-right: 1px;
+    transition: .3s linear;
+}
+.grid__text_button:hover{
+    opacity: 0.6;
+}

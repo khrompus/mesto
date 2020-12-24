@@ -12,9 +12,15 @@
 @import url(../blocks/profile/__button-add/profile__button-add.css);
 @import url(../blocks/grid/grid.css);
 @import url(../blocks/grid/__items/grid__items.css);
+@import url(../blocks/grid/__image/grid__image.css);
+@import url(../blocks/grid/__text/grid__text.css);
+@import url(../blocks/grid/__text/_button/grid__text_button.css);
 
 
 
-div{
-    border: aliceblue 1px solid;
-}
+/*section{*/
+/*    border: aliceblue 1px solid;*/
+/*}*/
+/*div{*/
+/*    border: aliceblue 1px solid;*/
+/*}*/
