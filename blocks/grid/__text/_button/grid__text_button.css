@@ -4,8 +4,9 @@
     height: 21px;
     background-repeat: no-repeat;
     align-self: center;
-    margin-right: 1px;
     transition: .3s linear;
+    border: none;
+    cursor: pointer;
 }
 .grid__text_button:hover{
     opacity: 0.6;
