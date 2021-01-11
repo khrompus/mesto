@@ -1,0 +1,72 @@
+Index: index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!doctype html>\r\n<html lang=\"ru\">\r\n<head>\r\n    <meta charset=\"UTF-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"ie=edge\">\r\n    <link rel=\"stylesheet\" href=\"pages/index.css\">\r\n    <title>Mesto</title>\r\n</head>\r\n<body class=\"page\">\r\n<header class=\"header\">\r\n    <img src=\"./images/logo.svg\" alt=\"Место\" class=\"header__logo\">\r\n\r\n</header>\r\n<main>\r\n    <section class=\"profile\">\r\n        <img src=\"./images/image.jpg\" alt=\"Аватар\" class=\"profile__avatar\">\r\n        <div class=\"profile__info\">\r\n            <p class=\"profile__name\">Жак-Ив Кусто<a href=\"#\" class=\"profile__name_button\"></a></p>\r\n            <p class=\"profile__name-info\">Исследователь океана</p>\r\n        </div>\r\n        <a href=\"#\" class=\"profile__button-add\"></a>\r\n    </section>\r\n    <section class=\"grid\">\r\n        <div class=\"grid__items\">\r\n            <img src=\"./images/kirill-pershin-1088404-unsplash.jpg\" alt=\"Карачаевск\" class=\"grid__image\">\r\n            <p class=\"grid__text\">Карачаевск<a href=\"#\" class=\"grid__text_button\"></a></p>\r\n        </div>\r\n        <div class=\"grid__items\">\r\n            <img src=\"./images/kirill-pershin-1404681-unsplash.jpg\" alt=\"Гора Эльбрус\" class=\"grid__image\">\r\n            <p class=\"grid__text\">Гора Эльбрус<a href=\"#\" class=\"grid__text_button\"></a></p>\r\n        </div>\r\n        <div class=\"grid__items\">\r\n            <img src=\"./images/kirill-pershin-1556355-unsplash.jpg\" alt=\"Домбай\" class=\"grid__image\">\r\n            <p class=\"grid__text\">Домбай<a href=\"#\" class=\"grid__text_button\"></a></p>\r\n        </div>\r\n        <div class=\"grid__items\">\r\n            <img src=\"./images/kirill-pershin-1404681-unsplash.jpg\" alt=\"Гора Эльбрус\" class=\"grid__image\">\r\n            <p class=\"grid__text\">Гора Эльбрус<a href=\"#\" class=\"grid__text_button\"></a></p>\r\n        </div>\r\n        <div class=\"grid__items\">\r\n            <img src=\"./images/kirill-pershin-1556355-unsplash.jpg\" alt=\"Домбай\" class=\"grid__image\">\r\n            <p class=\"grid__text\">Домбай<a href=\"#\" class=\"grid__text_button\"></a></p>\r\n        </div>\r\n        <div class=\"grid__items\">\r\n            <img src=\"./images/kirill-pershin-1088404-unsplash.jpg\" alt=\"Карачаево\" class=\"grid__image\">\r\n            <p class=\"grid__text\">Карачаево-Ч...<a href=\"#\" class=\"grid__text_button\"></a></p>\r\n        </div>\r\n    </section>\r\n</main>\r\n\r\n<footer class=\"footer\">\r\n <p class=\"footer__text\">&copy; 2020 Mesto Russia</p>\r\n</footer>\r\n\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- index.html	(revision 9f3b5aa7f1537b8810fc920e74ff3e8fa6b61f5d)
++++ index.html	(date 1610300783789)
+@@ -50,7 +50,7 @@
+ </main>
+ 
+ <footer class="footer">
+- <p class="footer__text">&copy; 2020 Mesto Russia</p>
++    <p class="footer__text">&copy; 2020 Mesto Russia</p>
+ </footer>
+ 
+ 
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"REMOTE_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:origin\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"GROUP_NODE:features\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"5798ed2b-af50-4c28-9232-d93bc5a8e9c4\" name=\"Default Changelist\" comment=\"\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"fetures/footer\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"1lz1ImeHsP675JvU6AJVIPErsIr\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"dart.analysis.tool.window.visible\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$\" />\r\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\r\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\r\n  </component>\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1d4d9033-8d63-403d-bb19-f88029f1b5c3\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1608585027721</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1608585027721</updated>\r\n      <workItem from=\"1608585031799\" duration=\"584000\" />\r\n      <workItem from=\"1608649204736\" duration=\"9379000\" />\r\n      <workItem from=\"1608721537306\" duration=\"3096000\" />\r\n      <workItem from=\"1608838094448\" duration=\"1118000\" />\r\n      <workItem from=\"1608839215344\" duration=\"162000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"first commit\">\r\n      <created>1608585276767</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1608585276767</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"2\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State>\r\n              <option name=\"CUSTOM_BOOLEAN_PROPERTIES\">\r\n                <map>\r\n                  <entry key=\"Show.Git.Branches\" value=\"false\" />\r\n                </map>\r\n              </option>\r\n            </State>\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"first commit\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"first commit\" />\r\n  </component>\r\n  <component name=\"WindowStateProjectService\">\r\n    <state x=\"732\" y=\"321\" key=\"#com.intellij.fileTypes.FileTypeChooser\" timestamp=\"1608649546182\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"732\" y=\"321\" key=\"#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1608649546182\" />\r\n    <state x=\"740\" y=\"274\" key=\"FileChooserDialogImpl\" timestamp=\"1608839212331\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"740\" y=\"274\" key=\"FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1608839212331\" />\r\n    <state x=\"616\" y=\"240\" key=\"run.anything.popup\" timestamp=\"1608838405213\">\r\n      <screen x=\"0\" y=\"0\" width=\"1920\" height=\"1040\" />\r\n    </state>\r\n    <state x=\"616\" y=\"240\" key=\"run.anything.popup/0.0.1920.1040@0.0.1920.1040\" timestamp=\"1608838405213\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision 9f3b5aa7f1537b8810fc920e74ff3e8fa6b61f5d)
++++ .idea/workspace.xml	(date 1610300784205)
+@@ -25,7 +25,10 @@
+     <select />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="" />
++    <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="">
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -63,13 +66,23 @@
+     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="list.type.of.created.stylesheet" value="CSS" />
+     <property name="nodejs_package_manager_path" value="npm" />
++  </component>
++  <component name="RunManager">
++    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/mesto/index.html" useBuiltInWebServerPort="true">
++      <method v="2" />
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="JavaScript Debug.index.html" />
++      </list>
++    </recent_temporary>
+   </component>
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="1d4d9033-8d63-403d-bb19-f88029f1b5c3" name="Default Changelist" comment="" />
++      <changelist id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="" />
+       <created>1608585027721</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+@@ -79,6 +92,7 @@
+       <workItem from="1608721537306" duration="3096000" />
+       <workItem from="1608838094448" duration="1118000" />
+       <workItem from="1608839215344" duration="162000" />
++      <workItem from="1610300484926" duration="297000" />
+     </task>
+     <task id="LOCAL-00001" summary="first commit">
+       <created>1608585276767</created>
