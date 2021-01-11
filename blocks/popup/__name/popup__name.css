@@ -1,0 +1,21 @@
+.popup__name{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    max-width: 386px;
+    width: 100%;
+    padding-bottom: 13px;
+    margin-bottom: 30px;
+    outline: none;
+    margin-top: 75px;
+}
+@media screen and (max-width: 879px){
+    .popup__name{
+        max-width: 238px;
+    }
+}
