@@ -25,12 +25,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/blocks/popup-window/__active/popup-window__active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/overlay/__active/overlay__active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup-window/popup-window.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/overlay/overlay.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
+    <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +107,7 @@
       <workItem from="1610303662346" duration="3842000" />
       <workItem from="1610383439798" duration="3737000" />
       <workItem from="1610391769583" duration="12019000" />
-      <workItem from="1610405577451" duration="320000" />
+      <workItem from="1610405577451" duration="666000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
@@ -120,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608585276767</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="popup rename">
+      <created>1610406054577</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1610406054577</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +150,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="popup rename" />
+    <option name="LAST_COMMIT_MESSAGE" value="popup rename" />
   </component>
   <component name="WindowStateProjectService">
     <state x="732" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608649546182">
