@@ -1,4 +1,4 @@
-.popup__container{
+.popup{
     background: #FFFFFF;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
     border-radius: 10px;
@@ -10,7 +10,7 @@
     justify-content: center;
 }
 @media screen and (max-width: 879px){
-    .popup__container{
+    .popup{
         max-width: 282px;
     }
 }
