@@ -20,27 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__container/popup__container.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__name/_aboutMe/popup__name_aboutMe.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup/__name/_firstName/popup__name_firstName.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/footer/__text/footer__text.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/footer/__text/footer__text.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/grid/__text/grid__text.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/grid/__text/grid__text.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/header/__logo/header__logo.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/overlay/__active/overlay__active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__active/popup__active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/overlay/overlay.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__exit-btn/popup__exit-btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__exit-btn/popup__exit-btn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__name-info/popup__name-info.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__submit-btn/popup__submit-btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__submit-btn/popup__submit-btn.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/profile/__button-add/profile__button-add.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__button-add/profile__button-add.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__subtitle/profile__subtitle.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__subtitle/profile__subtitle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__title/profile__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__title/profile__title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/fonts.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +106,7 @@
       <workItem from="1610405577451" duration="666000" />
       <workItem from="1610407630341" duration="751000" />
       <workItem from="1610447778473" duration="4427000" />
+      <workItem from="1610452660895" duration="56000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
