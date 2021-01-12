@@ -6,6 +6,8 @@
     border: none;
     cursor: pointer;
     align-self: center;
+    border: 0;
+    outline: none;
 }
 
 .profile__button-add:hover{

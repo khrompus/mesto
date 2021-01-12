@@ -3,7 +3,7 @@
     src: url('./Inter-Medium/Inter-Medium.eot');
     src: url('./inter-medium/Inter-Medium.woff') format('woff');
     src: url('./inter-medium/Inter-Medium.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 500;
     font-style: normal;
 }
 @font-face {
