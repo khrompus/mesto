@@ -16,6 +16,7 @@
 }
 @font-face {
     font-family: 'Inter';
+    src: url('./inter-regular/Inter-Regular.otf') format('otf');
     src: url('./Inter-regular/Inter-Regular.eot');
     src: url('./inter-regular/Inter-Regular.woff') format('woff');
     src: url('./inter-regular/Inter-Regular.ttf') format('truetype');

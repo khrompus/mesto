@@ -20,20 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
-      <change afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.otf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__active/popup__active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/_active/popup_active.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__name/_aboutMe/popup__name_aboutMe.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__name/_firstName/popup__name_firstName.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__title/popup__title.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.woff" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +112,7 @@
       <workItem from="1610452660895" duration="56000" />
       <workItem from="1610470456450" duration="644000" />
       <workItem from="1610536714742" duration="1827000" />
+      <workItem from="1610542102932" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
