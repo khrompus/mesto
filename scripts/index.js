@@ -6,19 +6,22 @@ let subtitle = document.querySelector('.profile__subtitle');
 let formElement = document.querySelector('.popup__form');
 let popupName = formElement.querySelector('.popup__name_firstName');
 let popupNameSubtitle = formElement.querySelector('.popup__name_aboutMe');
-let togglePopup = () => {
-    popup.classList.toggle('popup__active')
+let activePopup = () => {
+    popup.classList.add('popup_active')
     popupName.value = title.textContent
     popupNameSubtitle.value = subtitle.textContent
 }
-openPopupBtn.addEventListener('click', togglePopup);
-popupExit.addEventListener('click', togglePopup);
+let exitPopup = () => {
+    popup.classList.remove('popup_active')
+}
+openPopupBtn.addEventListener('click', activePopup);
+popupExit.addEventListener('click', exitPopup);
 
 function handleFormSubmit(evt) {
     evt.preventDefault()
     title.textContent = popupName.value;
     subtitle.textContent = popupNameSubtitle.value;
-    togglePopup()
+    exitPopup();
 }
 
 formElement.addEventListener('submit', handleFormSubmit);

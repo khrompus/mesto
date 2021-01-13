@@ -13,6 +13,10 @@
     outline: none;
 
 }
+.popup__name:first-child{
+    margin-top: 75px;
+    margin-bottom: 30px;
+}
 @media screen and (max-width: 879px){
     .popup__name{
         max-width: 238px;
