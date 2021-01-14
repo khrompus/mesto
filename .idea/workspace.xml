@@ -20,11 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
-      <change afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.otf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fonts/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/fonts.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.woff" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/fonts/inter-regular/Inter-Regular.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,6 +113,8 @@
       <workItem from="1610470456450" duration="644000" />
       <workItem from="1610536714742" duration="1827000" />
       <workItem from="1610542102932" duration="150000" />
+      <workItem from="1610561763040" duration="647000" />
+      <workItem from="1610631752876" duration="1975000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>

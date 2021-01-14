@@ -1,6 +1,6 @@
-.popup__name{
+.popup__input{
     font-style: normal;
-    font-weight: 500;
+    font-weight: normal;
     font-size: 14px;
     line-height: 17px;
     border-bottom: 1px solid rgba(0, 0, 0, .2);
@@ -13,12 +13,12 @@
     outline: none;
 
 }
-.popup__name:first-child{
+.popup__input:first-child{
     margin-top: 75px;
     margin-bottom: 30px;
 }
 @media screen and (max-width: 879px){
-    .popup__name{
+    .popup__input{
         max-width: 238px;
     }
 }

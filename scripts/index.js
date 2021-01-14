@@ -4,8 +4,8 @@ let popupExit = popup.querySelector('.popup__exit-btn');
 let title = document.querySelector('.profile__title');
 let subtitle = document.querySelector('.profile__subtitle');
 let formElement = document.querySelector('.popup__form');
-let popupName = formElement.querySelector('.popup__name_firstName');
-let popupNameSubtitle = formElement.querySelector('.popup__name_aboutMe');
+let popupName = formElement.querySelector('.popup__input_type_first-name');
+let popupNameSubtitle = formElement.querySelector('.popup__input_type_about-me');
 let activePopup = () => {
     popup.classList.add('popup_active')
     popupName.value = title.textContent
@@ -25,6 +25,3 @@ function handleFormSubmit(evt) {
 }
 
 formElement.addEventListener('submit', handleFormSubmit);
-
-
-
