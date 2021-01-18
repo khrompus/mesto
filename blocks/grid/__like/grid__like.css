@@ -1,5 +1,6 @@
 .grid__like{
-    background: url("../../../images/Group.svg");
+    background-image: url("../../../images/Group.svg");
+    background-color: white;
     width: 21px;
     height: 21px;
     background-repeat: no-repeat;
@@ -10,10 +11,8 @@
     margin-left: auto;
     margin-right: 12px;
     outline: none;
+
 }
 .grid__like:hover{
     opacity: 0.6;
-}
-.grid__like:visited{
-    background: url("../../../images/Union.svg");
 }

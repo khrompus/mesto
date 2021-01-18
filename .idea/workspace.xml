@@ -20,8 +20,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
+      <change afterPath="$PROJECT_DIR$/blocks/grid/__delete-btn/grid__delete-btn.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/grid/__like/_active/grid__like_active.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/likeBlack.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/trash.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2021_22_00_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2021_22_00__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2021_22_46_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_10_01_2021_22_46__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blocks/popup/__name/popup__name.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/grid/__image/grid__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/grid/__image/grid__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/grid/__like/grid__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/grid/__like/grid__like.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/_active/popup_active.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/_active/popup_active.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/popup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Union.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1088404-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1404681-unsplash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/kirill-pershin-1556355-unsplash.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
@@ -115,6 +130,11 @@
       <workItem from="1610542102932" duration="150000" />
       <workItem from="1610561763040" duration="647000" />
       <workItem from="1610631752876" duration="1975000" />
+      <workItem from="1610635565136" duration="1219000" />
+      <workItem from="1610973460931" duration="9576000" />
+      <workItem from="1610983513013" duration="1212000" />
+      <workItem from="1610984784538" duration="262000" />
+      <workItem from="1611000888081" duration="2040000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
