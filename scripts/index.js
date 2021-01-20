@@ -8,6 +8,10 @@ let popupName = formElement.querySelector('.popup__input_type_first-name');
 let popupNameSubtitle = formElement.querySelector('.popup__input_type_about-me');
 let templateGrid = document.querySelector('.grid-template').content;
 let gridContainer = document.querySelector('.grid');
+let popupGrid = document.querySelector('.popup-grid');
+let popupGridImage = document.querySelector('.popup__input_type_image-name');
+let popupGridLink = document.querySelector('.popup__input_type_link');
+let openGridPopupBtn = document.querySelector('.profile__button-add');
 const gridArray = [
     {
         name: 'Архыз',
@@ -67,3 +71,12 @@ function handleFormSubmit(evt) {
     exitPopup();
 }
 formElement.addEventListener('submit', handleFormSubmit);
+openGridPopupBtn.addEventListener('click', function () {
+popupGrid.classList.toggle('popup_active');
+})
+popupExit.addEventListener('click', function () {
+popupGrid.classList.remove('popup_active');
+})
+let popupGridArr = []
+
+

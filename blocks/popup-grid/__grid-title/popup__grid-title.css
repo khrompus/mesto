@@ -1,0 +1,14 @@
+.popup__grid-title{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 29px;
+    color: black;
+    margin: 34px 0 -21px 22px;
+}
+@media screen and (max-width: 879px){
+    .popup__title{
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
