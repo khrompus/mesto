@@ -90,6 +90,6 @@ exitGridPopup.addEventListener('click', function () {
 popupImageExit.addEventListener('click', function () {
     popupImage.classList.remove('popup_active');
 })
-popupOpenImage.addEventListener('click', function () {
-    popupImage.classList.add('popup_active');
-})
+// popupOpenImage.addEventListener('click', function () {
+//     popupImage.classList.add('popup_active');
+// })

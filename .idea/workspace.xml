@@ -20,8 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
+      <change afterPath="$PROJECT_DIR$/images/add-phones.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blocks/profile/__button-add/profile__button-add.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/profile/__button-add/profile__button-add.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Add-large.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +124,7 @@
       <workItem from="1611006372487" duration="514000" />
       <workItem from="1611170662474" duration="7624000" />
       <workItem from="1611237050428" duration="219000" />
+      <workItem from="1611237477609" duration="158000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
