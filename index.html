@@ -39,26 +39,34 @@
         <button class="popup__exit-btn" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
         <form class="popup__form" name="form">
-            <input placeholder="" class="popup__input popup__input_type_first-name" type="text" name="firstName">
-            <input placeholder="" class="popup__input popup__input_type_about-me" type="text" name="aboutMe">
+            <input placeholder="Имя" class="popup__input popup__input_type_first-name" type="text" name="firstName">
+            <input placeholder="О себе" class="popup__input popup__input_type_about-me" type="text" name="aboutMe">
             <button class="popup__submit-btn" type="submit" name="firstNameInfo">Сохранить</button>
         </form>
     </div>
 </section>
-<section class="popup">
+<section class="popup" id="popupImage">
+    <div class="popup__container-image">
+        <button class="popup__exit-btn popup__image-exit-btn" type="button"></button>
+        <img class="popup__image" src="" alt="">
+        <p class="popup__image-text"></p>
+    </div>
+</section>
+<section class="popup" id="popupAddCard">
     <div class="popup__container">
-        <button class="popup__exit-btn" type="button"></button>
+        <button class="popup__exit-btn popup__grid-exit-btn" type="button"></button>
         <h2 class="popup__title">Новое место</h2>
         <form class="popup__form" name="form">
-            <input placeholder="" class="popup__input popup__input_type_image-name" type="text" name="gridImageName">
-            <input placeholder="" class="popup__input popup__input_type_link" type="text" name="link">
-            <button class="popup__submit-btn" type="submit" name="firstNameInfo">Сохранить</button>
+            <input placeholder="Новое место" class="popup__input popup__input_add-card popup__input_type_image-name" type="text" name="gridImageName">
+            <input placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" type="text" name="link">
+            <button class="popup__submit-btn" type="submit" name="addCardBtn">Сохранить</button>
         </form>
     </div>
 </section>
+
 <template class="grid-template">
     <div class="grid__items">
-        <img src="" alt="" class="grid__image">
+        <img src="" alt="" class="grid__image grid__image-active">
         <button class="grid__delete-btn" type="button"></button>
         <div class="grid__text-group">
             <h2 class="grid__text"></h2>

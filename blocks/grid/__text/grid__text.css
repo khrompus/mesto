@@ -1,5 +1,4 @@
 .grid__text{
-    /*margin-top: 25px;*/
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -10,5 +9,4 @@
     line-height: 29px;
     margin:25px 0 0 21px;
     max-width: 185px;
-    /*min-width: 246px;*/
 }

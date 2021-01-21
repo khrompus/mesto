@@ -20,9 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
-      <change afterPath="$PROJECT_DIR$/blocks/popup-grid/__grid-title/popup__grid-title.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blocks/popup-grid/popup-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__container-image/popup__container-image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__image-text/popup__image-text.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__image/popup__image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__input/_add-card/popup__input_add-card.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/grid/__image/grid__image.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/grid/__image/grid__image.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/grid/__items/grid__items.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/grid/__items/grid__items.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/grid/__text/grid__text.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/grid/__text/grid__text.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup-grid/__grid-title/popup__grid-title.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup-grid/popup-grid.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
@@ -123,6 +131,7 @@
       <workItem from="1611000888081" duration="2040000" />
       <workItem from="1611003268198" duration="3028000" />
       <workItem from="1611006372487" duration="514000" />
+      <workItem from="1611170662474" duration="7624000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
@@ -169,6 +178,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="popup rename" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="845" y="382" key="#Notifications" timestamp="1611177979888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="845" y="382" key="#Notifications/0.0.1920.1040@0.0.1920.1040" timestamp="1611177979888" />
     <state x="732" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608649546182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -177,9 +190,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608839212331" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1608838405213">
+    <state x="616" y="240" key="run.anything.popup" timestamp="1611177950445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608838405213" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1611177950445" />
   </component>
 </project>
