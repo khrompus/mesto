@@ -3,20 +3,20 @@ let popup = document.querySelector('.popup');
 let popupExit = popup.querySelector('.popup__exit-btn');
 let title = document.querySelector('.profile__title');
 let subtitle = document.querySelector('.profile__subtitle');
-let formElement = document.querySelector('.popup__form');
+let formElement = popup.querySelector('.popup__form');
 let popupName = formElement.querySelector('.popup__input_type_first-name');
 let popupNameSubtitle = formElement.querySelector('.popup__input_type_about-me');
 let templateGrid = document.querySelector('.grid-template').content;
 let gridContainer = document.querySelector('.grid');
 let popupGrid = document.querySelector('#popupAddCard');
-let popupGridImage = document.querySelector('.popup__input_type_image-name');
+let popupGridImageName = document.querySelector('.popup__input_type_image-name');
 let popupGridLink = document.querySelector('.popup__input_type_link');
-let popupOpenImage = document.querySelector('.grid__image-active');
 let popupImageExit = document.querySelector('.popup__image-exit-btn');
 let popupImage = document.querySelector('#popupImage');
 let openGridPopupBtn = document.querySelector('.profile__button-add');
 let exitGridPopup = document.querySelector('.popup__grid-exit-btn');
-const gridArray = [
+let popupAddImgSubmit = popupGrid.querySelector('.popup__form');
+let gridArray = [
     {
         name: 'Архыз',
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
@@ -46,21 +46,22 @@ gridArray.forEach(function (element) {
     const gridElement = templateGrid.cloneNode(true);
     gridElement.querySelector('.grid__image').src = element.link;
     gridElement.querySelector('.grid__text').textContent = element.name;
-    gridElement.querySelector('.grid__image').alt = element.name
-    // like active
-    gridElement.querySelector('.grid__like').addEventListener('click', likeActive)
-    //remove grid items
-    gridElement.querySelector('.grid__delete-btn').addEventListener('click', deleteCard)
+    gridElement.querySelector('.grid__image').alt = element.name;
+    // handleOpenPopupImage(gridElement);
+    handleReaction(gridElement);
     gridContainer.append(gridElement);
 })
-
 function deleteCard(evt) {
     evt.target.closest('.grid__items').remove();
 }
 function likeActive(evt) {
     evt.target.classList.toggle('grid__like_active');
 }
-
+function handleReaction(elem) {
+    elem.querySelector('.grid__delete-btn').addEventListener('click', deleteCard);
+    elem.querySelector('.grid__like').addEventListener('click', likeActive);
+    elem.querySelector('.grid__image').addEventListener('click', handleOpenPopupImage)
+}
 let activePopup = () => {
     popup.classList.add('popup_active')
     popupName.value = title.textContent
@@ -69,27 +70,41 @@ let activePopup = () => {
 let exitPopup = () => {
     popup.classList.remove('popup_active')
 }
-openPopupBtn.addEventListener('click', activePopup);
-popupExit.addEventListener('click', exitPopup);
-
 function handleFormSubmit(evt) {
     evt.preventDefault()
     title.textContent = popupName.value;
     subtitle.textContent = popupNameSubtitle.value;
     exitPopup();
 }
-
-formElement.addEventListener('submit', handleFormSubmit);
-openGridPopupBtn.addEventListener('click', function () {
+function gridPopupActive() {
     popupGrid.classList.add('popup_active');
-})
-exitGridPopup.addEventListener('click', function () {
+}
+function gridPopupDisable() {
     popupGrid.classList.remove('popup_active');
-})
-
+}
+function handleOpenPopupImage(evt) {
+    const item = evt.target;
+    popupImage.querySelector('.popup__image').src = item.getAttribute('src', true)
+    popupImage.querySelector('.popup__image-text').textContent = item.closest('.grid__items').textContent
+    popupImage.classList.add('popup_active');
+}
+function handleAddCard(evt) {
+    evt.preventDefault();
+    const elem = templateGrid.cloneNode(true);
+    elem.querySelector('.grid__image').src = popupGridLink.value;
+    elem.querySelector('.grid__text').textContent = popupGridImageName.value;
+    handleReaction(elem);
+    popupGridImageName.value = "";
+    popupGridLink.value = "";
+    gridContainer.prepend(elem);
+    gridPopupDisable();
+}
 popupImageExit.addEventListener('click', function () {
     popupImage.classList.remove('popup_active');
 })
-// popupOpenImage.addEventListener('click', function () {
-//     popupImage.classList.add('popup_active');
-// })
+exitGridPopup.addEventListener('click', gridPopupDisable);
+openPopupBtn.addEventListener('click', activePopup);
+popupExit.addEventListener('click', exitPopup);
+openGridPopupBtn.addEventListener('click', gridPopupActive);
+popupAddImgSubmit.addEventListener('submit', handleAddCard);
+formElement.addEventListener('submit', handleFormSubmit);
