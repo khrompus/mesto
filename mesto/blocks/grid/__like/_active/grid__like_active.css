@@ -1,0 +1,6 @@
+.grid__like_active{
+    background-image: url("../../../../images/likeBlack.svg");
+    background-color: white;
+    border: none;
+    outline: none;
+}
