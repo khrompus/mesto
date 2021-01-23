@@ -6,8 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/image.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/image.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +111,7 @@
       <workItem from="1611237050428" duration="219000" />
       <workItem from="1611237477609" duration="158000" />
       <workItem from="1611416450479" duration="107000" />
+      <workItem from="1611416689706" duration="140000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
