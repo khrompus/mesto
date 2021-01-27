@@ -6,7 +6,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,6 +121,7 @@
       <workItem from="1611617040168" duration="406000" />
       <workItem from="1611695039131" duration="3667000" />
       <workItem from="1611765697091" duration="1078000" />
+      <workItem from="1611766916273" duration="164000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>

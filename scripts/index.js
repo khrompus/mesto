@@ -121,6 +121,8 @@ function createCard(item) {
     item.querySelector('.grid__image').src = popupGridLink.value;
     item.querySelector('.grid__text').textContent = popupGridImageName.value;
     item.querySelector('.grid__image').alt = popupGridImageName.value;
+    popupGridImageName.value = "";
+    popupGridLink.value = "";
 }
 
 function handleAddCard(evt) {
@@ -128,8 +130,6 @@ function handleAddCard(evt) {
     evt.preventDefault();
     const elem = templateGrid.cloneNode(true);
     createCard(elem);
-    popupGridImageName.value = "";
-    popupGridLink.value = "";
     handleReaction(elem);
     addNewCard(elem);
     closePopup(popupGrid);
