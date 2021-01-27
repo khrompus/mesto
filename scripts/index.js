@@ -44,25 +44,55 @@ const gridArray = [
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
 ];
+const getCardElement = (data) => {
+    const cardElement = templateGrid.cloneNode(true);
+    const likeButton = cardElement.querySelector('.grid__like');
+    const deleteButton = cardElement.querySelector('.grid__delete-btn');
+    const cardImage = cardElement.querySelector('.grid__image');
+    cardElement.querySelector('.grid__text').textContent = data.name;
+    likeButton.addEventListener('click', handleLikeButton);
+    deleteButton.addEventListener('click', handleDeleteCard);
+    cardImage.src = data.link
+    cardImage.alt = data.name;
+    cardImage.addEventListener('click', function handleOpenPopupImage(evt) {
+        const item = evt.target;
+        popupImageCard.src = item.getAttribute('src', true);
+        popupImageCard.alt = item.closest('.grid__items').textContent;
+        popupTextCard.textContent = item.closest('.grid__items').textContent;
+        openPopup(popupImage);
+    });
+    return cardElement;
+};
 
 function renderCard() {
     gridArray.forEach(function (element) {
-        const newCard = createNewCard(element);
+        const newCard = getCardElement(element);
         addNewCard(newCard);
     })
 }
 
 function addNewCard(element) {
-    gridContainer.append(element)
+    gridContainer.prepend(element);
 }
 
-function createNewCard(element) {
-    const gridElement = templateGrid.cloneNode(true);
-    gridElement.querySelector('.grid__image').src = element.link;
-    gridElement.querySelector('.grid__text').textContent = element.name;
-    gridElement.querySelector('.grid__image').alt = element.name;
-    handleReaction(gridElement);
-    return gridElement;
+function handleDeleteCard(evt) {
+    evt.target.closest('.grid__items').remove();
+}
+
+function handleLikeButton(evt) {
+    evt.target.classList.toggle('grid__like_active');
+}
+
+function handleReaction(elem) {
+    elem.querySelector('.grid__delete-btn').addEventListener('click', handleDeleteCard);
+    elem.querySelector('.grid__like').addEventListener('click', handleLikeButton);
+    elem.querySelector('.grid__image').addEventListener('click', function handleOpenPopupImage(evt) {
+        const item = evt.target;
+        popupImageCard.src = item.getAttribute('src', true);
+        popupImageCard.alt = item.closest('.grid__items').textContent;
+        popupTextCard.textContent = item.closest('.grid__items').textContent;
+        openPopup(popupImage);
+    });
 }
 
 function openPopup(popup) {
@@ -73,40 +103,18 @@ function closePopup(popup) {
     popup.classList.remove('popup_active');
 }
 
-function deleteCard(evt) {
-    evt.target.closest('.grid__items').remove();
-}
 
-function activeLike(evt) {
-    evt.target.classList.toggle('grid__like_active');
-}
-
-function handleReaction(elem) {
-    elem.querySelector('.grid__delete-btn').addEventListener('click', deleteCard);
-    elem.querySelector('.grid__like').addEventListener('click', activeLike);
-    elem.querySelector('.grid__image').addEventListener('click', function handleOpenPopupImage(evt) {
-        const item = evt.target;
-        popupImageCard.src = item.getAttribute('src', true);
-        popupImageCard.alt = item.closest('.grid__items').textContent;
-        popupTextCard.textContent = item.closest('.grid__items').textContent;
-        openPopup(popupImage);
-    });
-}
-
-let activePopup = () => {
-    popup.classList.add('popup_active')
+const handlePopupActive = () => {
+    openPopup(popup);
     popupName.value = title.textContent
     popupNameSubtitle.value = subtitle.textContent
-}
-let exitPopup = () => {
-    popup.classList.remove('popup_active')
 }
 
 function handleFormSubmit(evt) {
     evt.preventDefault()
     title.textContent = popupName.value;
     subtitle.textContent = popupNameSubtitle.value;
-    exitPopup();
+    closePopup(popup);
 }
 
 function createCard(item) {
@@ -116,18 +124,16 @@ function createCard(item) {
 }
 
 function handleAddCard(evt) {
+
     evt.preventDefault();
     const elem = templateGrid.cloneNode(true);
     createCard(elem);
-    handleReaction(elem);
     popupGridImageName.value = "";
     popupGridLink.value = "";
-    addAtFirstCard(elem);
+    handleReaction(elem);
+    addNewCard(elem);
     closePopup(popupGrid);
-}
 
-function addAtFirstCard(element) {
-    gridContainer.prepend(element);
 }
 
 renderCard()
@@ -137,8 +143,10 @@ popupImageExit.addEventListener('click', () => {
 exitGridPopup.addEventListener('click', () => {
     closePopup(popupGrid);
 });
-openPopupBtn.addEventListener('click', activePopup);
-popupExit.addEventListener('click', exitPopup);
+openPopupBtn.addEventListener('click', handlePopupActive);
+popupExit.addEventListener('click', () => {
+    closePopup(popup);
+});
 openGridPopupBtn.addEventListener('click', () => {
     openPopup(popupGrid);
 });
