@@ -111,7 +111,8 @@ function handleAddCard(evt) {
         name: popupGridImageName.value,
         link: popupGridLink.value
     });
-    formElement.reset()
+    popupGridImageName.value = "";
+    popupGridLink.value = "";
     addNewCard(newCard);
     closePopup(popupGrid);
 
