@@ -54,16 +54,16 @@ const getCardElement = (data) => {
     deleteButton.addEventListener('click', handleDeleteCard);
     cardImage.src = data.link
     cardImage.alt = data.name;
-    cardImage.addEventListener('click', function handleOpenPopupImage(evt) {
-        const item = evt.target;
-        popupImageCard.src = item.getAttribute('src', true);
-        popupImageCard.alt = item.closest('.grid__items').textContent;
-        popupTextCard.textContent = item.closest('.grid__items').textContent;
-        openPopup(popupImage);
-    });
+    cardImage.addEventListener('click', ()=> handleOpenPopupImage(data));
     return cardElement;
 };
-
+// function handleOpenPopupImage(evt) {
+//     const item = evt.target;
+//     popupImageCard.src = item.getAttribute('src', true);
+//     popupImageCard.alt = item.closest('.grid__items').textContent;
+//     popupTextCard.textContent = item.closest('.grid__items').textContent;
+//     openPopup(popupImage);
+// }
 function renderCard() {
     gridArray.forEach(function (element) {
         const newCard = getCardElement(element);
@@ -86,13 +86,21 @@ function handleLikeButton(evt) {
 function handleReaction(elem) {
     elem.querySelector('.grid__delete-btn').addEventListener('click', handleDeleteCard);
     elem.querySelector('.grid__like').addEventListener('click', handleLikeButton);
-    elem.querySelector('.grid__image').addEventListener('click', function handleOpenPopupImage(evt) {
-        const item = evt.target;
-        popupImageCard.src = item.getAttribute('src', true);
-        popupImageCard.alt = item.closest('.grid__items').textContent;
-        popupTextCard.textContent = item.closest('.grid__items').textContent;
-        openPopup(popupImage);
-    });
+    // elem.querySelector('.grid__image').addEventListener('click', () =>handleOpenPopupImage);
+}
+// function handleOpenPopupImage(evt) {
+//     const item = evt.target;
+//     popupImageCard.src = item.getAttribute('src', true);
+//     popupImageCard.alt = item.closest('.grid__items').textContent;
+//     popupTextCard.textContent = item.closest('.grid__items').textContent;
+//     openPopup(popupImage);
+// }
+
+function handleOpenPopupImage(data) {
+    popupImageCard.src = data.link;
+    popupImageCard.alt = data.name;
+    popupTextCard.textContent =  data.name;
+    openPopup(popupImage);
 }
 
 function openPopup(popup) {
@@ -121,16 +129,14 @@ function createCard(item) {
     item.querySelector('.grid__image').src = popupGridLink.value;
     item.querySelector('.grid__text').textContent = popupGridImageName.value;
     item.querySelector('.grid__image').alt = popupGridImageName.value;
-    popupGridImageName.value = "";
-    popupGridLink.value = "";
+
 }
 
 function handleAddCard(evt) {
-
     evt.preventDefault();
-    const elem = templateGrid.cloneNode(true);
-    createCard(elem);
-    handleReaction(elem);
+    const elem = getCardElement();
+    popupGridImageName.value = "";
+    popupGridLink.value = "";
     addNewCard(elem);
     closePopup(popupGrid);
 
