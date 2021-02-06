@@ -136,7 +136,7 @@ openGridPopupBtn.addEventListener('click', () => {
 });
 popupAddImgSubmit.addEventListener('submit', handleAddCard);
 formElement.addEventListener('submit', handleFormSubmit);
-
+popupImage.addEventListener('click', closeByClick)
 popupGrid.addEventListener('click', closeByClick);
 popup.addEventListener('click', closeByClick);
 function closeByClick(event) {
