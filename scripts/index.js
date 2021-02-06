@@ -86,10 +86,12 @@ function handleOpenPopupImage(data) {
 
 function openPopup(popup) {
     popup.classList.add('popup_active');
+    document.addEventListener('keydown', closePopupKey)
 }
 
 function closePopup(popup) {
     popup.classList.remove('popup_active');
+    document.addEventListener('keydown', closePopupKey)
 }
 
 const handlePopupActive = () => {
@@ -111,11 +113,11 @@ function handleAddCard(evt) {
         name: popupGridImageName.value,
         link: popupGridLink.value
     });
-    popupGridImageName.value = "";
-    popupGridLink.value = "";
+    toggleButtonState(popupAddImgSubmit)
+    popupGridImageName.value = ''
+    popupGridLink.value = ''
     addNewCard(newCard);
     closePopup(popupGrid);
-
 }
 
 renderCard()
@@ -129,8 +131,25 @@ openPopupBtn.addEventListener('click', handlePopupActive);
 popupExit.addEventListener('click', () => {
     closePopup(popup);
 });
+
 openGridPopupBtn.addEventListener('click', () => {
     openPopup(popupGrid);
 });
 popupAddImgSubmit.addEventListener('submit', handleAddCard);
 formElement.addEventListener('submit', handleFormSubmit);
+
+popupGrid.addEventListener('click', closeByClick);
+popup.addEventListener('click', closeByClick);
+function closeByClick(event) {
+    const activityPopup = document.querySelector('.popup_active')
+    if (event.target === event.currentTarget) {
+        closePopup(activityPopup)
+    }
+}
+
+function closePopupKey(evt) {
+    if (evt.key === 'Escape') {
+        const activityPopup = document.querySelector('.popup_active')
+        closePopup(activityPopup);
+    }
+}

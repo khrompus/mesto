@@ -38,9 +38,11 @@
     <div class="popup__container">
         <button class="popup__exit-btn" type="button"></button>
         <h2 class="popup__title">Редактировать профиль</h2>
-        <form class="popup__form" name="form">
-            <input placeholder="Имя" class="popup__input popup__input_type_first-name" type="text" name="firstName">
-            <input placeholder="О себе" class="popup__input popup__input_type_about-me" type="text" name="aboutMe">
+        <form class="popup__form" name="edit" novalidate>
+            <input placeholder="Имя" class="popup__input popup__input_type_first-name" id="firstName" type="text" name="firstName" required minlength="2" maxlength="40">
+            <span class="popup__input-error firstName-error"></span>
+            <input placeholder="О себе" class="popup__input popup__input_type_about-me" type="text" id="aboutMe" name="aboutMe" required minlength="2" maxlength="200">
+            <span class="popup__input-error aboutMe-error"></span>
             <button class="popup__submit-btn" type="submit" name="firstNameInfo">Сохранить</button>
         </form>
     </div>
@@ -56,10 +58,12 @@
     <div class="popup__container">
         <button class="popup__exit-btn popup__grid-exit-btn" type="button"></button>
         <h2 class="popup__title">Новое место</h2>
-        <form class="popup__form" id="AddCardForm" name="form">
+        <form class="popup__form" id="AddCardForm" name="addCardForm" novalidate>
             <input placeholder="Новое место" class="popup__input popup__input_add-card popup__input_type_image-name"
-                   type="text" name="gridImageName">
-            <input placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" type="text" name="link">
+                   type="text" name="gridImageName" id="newMesto" required minlength="2" maxlength="30">
+            <span class="popup__input-error newMesto-error"></span>
+            <input placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" id="urlLink" type="url" name="link" pattern="https://.*" required>
+            <span class="popup__input-error urlLink-error"></span>
             <button class="popup__submit-btn" type="submit" name="addCardBtn">Сохранить</button>
         </form>
     </div>
@@ -76,5 +80,6 @@
     </div>
 </template>
 <script src="scripts/index.js"></script>
+<script src="scripts/validate.js"></script>
 </body>
 </html>

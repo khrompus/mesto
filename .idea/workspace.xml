@@ -6,6 +6,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="popup rename">
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__input-error/_visible/popup__input-error_visible.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__input-error/popup__input-error.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__input/_type_error/popup__input_type_error.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blocks/popup/__submit-btn/_disable/popup__submit-btn_disable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__input/popup__input.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blocks/popup/__submit-btn/popup__submit-btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/blocks/popup/__submit-btn/popup__submit-btn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,6 +135,8 @@
       <workItem from="1611836125798" duration="1135000" />
       <workItem from="1611862348959" duration="807000" />
       <workItem from="1611863324523" duration="117000" />
+      <workItem from="1612542607987" duration="1497000" />
+      <workItem from="1612606222008" duration="17344000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
