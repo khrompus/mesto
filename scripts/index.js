@@ -113,7 +113,6 @@ function handleAddCard(evt) {
         name: popupGridImageName.value,
         link: popupGridLink.value
     });
-    toggleButtonState(popupAddImgSubmit)
     popupGridImageName.value = ''
     popupGridLink.value = ''
     addNewCard(newCard);
