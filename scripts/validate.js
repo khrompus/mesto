@@ -49,8 +49,10 @@ const setEventListeners = (formElement, options) => {
         inputElement.addEventListener('input', function () {
             checkInputValidity(formElement, inputElement, options)
             toggleButtonState(inputList, buttonElement, options)
+
         })
     })
+
 }
 const enableValidation = (options) => {
     const formList = Array.from(document.querySelectorAll(options.formSelector))

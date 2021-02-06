@@ -18,6 +18,7 @@ const exitGridPopup = document.querySelector('.popup__grid-exit-btn');
 const popupAddImgSubmit = popupGrid.querySelector('.popup__form');
 const popupImageCard = popupImage.querySelector('.popup__image');
 const popupTextCard = popupImage.querySelector('.popup__image-text');
+const popupEdit = document.querySelector('#popupEdit')
 const gridArray = [
     {
         name: 'Архыз',
@@ -91,13 +92,14 @@ function openPopup(popup) {
 
 function closePopup(popup) {
     popup.classList.remove('popup_active');
-    document.addEventListener('keydown', closePopupKey)
+    document.removeEventListener('keydown', closePopupKey)
 }
 
 const handlePopupActive = () => {
     openPopup(popup);
     popupName.value = title.textContent
     popupNameSubtitle.value = subtitle.textContent
+    setEventListeners(popupEdit, options)
 }
 
 function handleFormSubmit(evt) {
@@ -116,7 +118,9 @@ function handleAddCard(evt) {
     popupGridImageName.value = ''
     popupGridLink.value = ''
     addNewCard(newCard);
+    setEventListeners(popupGrid, options)
     closePopup(popupGrid);
+
 }
 
 renderCard()
