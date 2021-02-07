@@ -95,11 +95,16 @@ function closePopup(popup) {
     document.removeEventListener('keydown', closePopupKey)
 }
 
+const cardFormSubmitButton = popupGrid.querySelector('.popup__submit-btn');
+
+
+
 const handlePopupActive = () => {
     openPopup(popup);
     popupName.value = title.textContent
     popupNameSubtitle.value = subtitle.textContent
-    setEventListeners(popupEdit, options)
+    disableButton(cardFormSubmitButton , options);
+    closePopup(popupGrid);
 }
 
 function handleFormSubmit(evt) {
@@ -118,7 +123,7 @@ function handleAddCard(evt) {
     popupGridImageName.value = ''
     popupGridLink.value = ''
     addNewCard(newCard);
-    setEventListeners(popupGrid, options)
+    disableButton(cardFormSubmitButton , options);
     closePopup(popupGrid);
 
 }

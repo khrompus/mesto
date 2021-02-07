@@ -7,7 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="hotfix:index.js">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/validate.js" afterDir="false" />
     </list>
@@ -132,6 +131,7 @@
       <workItem from="1612606222008" duration="17344000" />
       <workItem from="1612638293596" duration="489000" />
       <workItem from="1612643362337" duration="1717000" />
+      <workItem from="1612692197617" duration="328000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>

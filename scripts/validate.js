@@ -18,6 +18,8 @@ const hideInputError = (formElement, inputElement, options) => {
     errorElement.classList.remove(options.errorClass);
     errorElement.textContent = '';
 };
+
+
 const checkInputValidity = (formElement, inputElement, options) => {
     if (!inputElement.validity.valid) {
         showInputError(formElement, inputElement, inputElement.validationMessage, options);
@@ -30,15 +32,16 @@ const hasInvalidInput = (inputList) => {
         return !inputElement.validity.valid
     })
 }
+function disableButton(buttonElement, options) {
+    buttonElement.disabled = true
+    buttonElement.classList.add(options.inactiveButtonClass);
+}
 const toggleButtonState = (inputList, buttonElement, options) => {
     if (hasInvalidInput(inputList)) {
-        buttonElement.disabled = true
-        buttonElement.classList.add(options.inactiveButtonClass)
-
+        disableButton(buttonElement, options);
     } else {
         buttonElement.disabled = false
         buttonElement.classList.remove(options.inactiveButtonClass)
-
     }
 }
 const setEventListeners = (formElement, options) => {
