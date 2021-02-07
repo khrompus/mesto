@@ -18,7 +18,6 @@ const exitGridPopup = document.querySelector('.popup__grid-exit-btn');
 const popupAddImgSubmit = popupGrid.querySelector('.popup__form');
 const popupImageCard = popupImage.querySelector('.popup__image');
 const popupTextCard = popupImage.querySelector('.popup__image-text');
-const popupEdit = document.querySelector('#popupEdit')
 const gridArray = [
     {
         name: 'Архыз',
@@ -103,8 +102,6 @@ const handlePopupActive = () => {
     openPopup(popup);
     popupName.value = title.textContent
     popupNameSubtitle.value = subtitle.textContent
-    disableButton(cardFormSubmitButton , options);
-    closePopup(popupGrid);
 }
 
 function handleFormSubmit(evt) {
