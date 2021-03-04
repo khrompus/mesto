@@ -1,3 +1,4 @@
+import Card from './card.js'
 const openPopupBtn = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
 const popupExit = popup.querySelector('.popup__exit-btn');
@@ -158,3 +159,5 @@ function closePopupKey(evt) {
         closePopup(activityPopup);
     }
 }
+
+

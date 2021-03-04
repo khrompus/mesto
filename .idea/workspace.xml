@@ -6,9 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="hotfix:index.js">
-      <change afterPath="$PROJECT_DIR$/scripts/Card.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,6 +141,13 @@
       <workItem from="1612692838969" duration="105000" />
       <workItem from="1612692961446" duration="81000" />
       <workItem from="1614704098286" duration="695000" />
+      <workItem from="1614722296179" duration="1791000" />
+      <workItem from="1614724704337" duration="4000" />
+      <workItem from="1614724810789" duration="60000" />
+      <workItem from="1614726351850" duration="195000" />
+      <workItem from="1614780024763" duration="23000" />
+      <workItem from="1614780129268" duration="191000" />
+      <workItem from="1614780361524" duration="1013000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
@@ -203,9 +210,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="732" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608649546182" />
-    <state x="740" y="274" key="FileChooserDialogImpl" timestamp="1608839212331">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="592" y="217" key="FileChooserDialogImpl" timestamp="1614780223004">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
+    <state x="592" y="217" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1614780223004" />
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608839212331" />
     <state width="1921" height="356" key="GridCell.Tab.0.bottom" timestamp="1614704794826">
       <screen x="0" y="0" width="1920" height="1040" />
