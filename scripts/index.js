@@ -1,4 +1,6 @@
 import {Card} from './Card.js'
+import {FormValidator} from "./FormValidator.js";
+const popupForms = document.querySelectorAll('.popup__form');
 const openPopupBtn = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
 const popupExit = popup.querySelector('.popup__exit-btn');
@@ -18,6 +20,15 @@ const exitGridPopup = document.querySelector('.popup__grid-exit-btn');
 const popupAddImgSubmit = popupGrid.querySelector('.popup__form');
 export const popupImageCard = popupImage.querySelector('.popup__image');
 export const popupTextCard = popupImage.querySelector('.popup__image-text');
+const addCardBtn = popupGrid.querySelector('.popup__submit-btn');
+const options = {
+    formSelector: '.popup__form',
+    inputSelector: '.popup__input',
+    buttonElement: '.popup__submit-btn',
+    inactiveButtonClass: 'popup__submit-btn_disable',
+    inputErrorClass: 'popup__input_type_error',
+    errorClass: 'popup__input-error_visible'
+}
 const gridArray = [
     {
         name: 'Архыз',
@@ -75,10 +86,6 @@ function closePopup(popup) {
     document.removeEventListener('keydown', closePopupKey)
 }
 
-const cardFormSubmitButton = popupGrid.querySelector('.popup__submit-btn');
-
-
-
 const handlePopupActive = () => {
     openPopup(popup);
     popupName.value = title.textContent
@@ -92,12 +99,11 @@ function handleFormSubmit(evt) {
     closePopup(popup);
 }
 
-function handleAddCard() {
-
+function handleAddCard(event) {
+    event.preventDefault()
     addNewCard();
-    disableButton(cardFormSubmitButton , options);
-    popupGridImageName.value = ''
-    popupGridLink.value = ''
+    popupAddImgSubmit.reset()
+    addCardBtn.classList.add('popup__submit-btn_disable');
     closePopup(popupGrid);
 
 }
@@ -133,5 +139,8 @@ function closePopupKey(evt) {
         closePopup(activityPopup);
     }
 }
-
+popupForms.forEach((formElement) => {
+    const formValidator = new FormValidator(options, formElement);
+    formValidator.enableValidation();
+})
 
