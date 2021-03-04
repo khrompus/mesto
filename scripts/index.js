@@ -1,5 +1,6 @@
 import {Card} from './Card.js'
 import {FormValidator} from "./FormValidator.js";
+
 const popupForms = document.querySelectorAll('.popup__form');
 const openPopupBtn = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
@@ -63,9 +64,6 @@ gridArray.forEach((item) => {
 })
 
 
-
-
-
 function addNewCard() {
     const data = {
         name: popupGridImageName.value,
@@ -127,18 +125,21 @@ formElement.addEventListener('submit', handleFormSubmit);
 popupImage.addEventListener('click', closeByClick)
 popupGrid.addEventListener('click', closeByClick);
 popup.addEventListener('click', closeByClick);
+
 function closeByClick(event) {
     const activityPopup = document.querySelector('.popup_active')
     if (event.target === event.currentTarget) {
         closePopup(activityPopup)
     }
 }
+
 function closePopupKey(evt) {
     if (evt.key === 'Escape') {
         const activityPopup = document.querySelector('.popup_active')
         closePopup(activityPopup);
     }
 }
+
 popupForms.forEach((formElement) => {
     const formValidator = new FormValidator(options, formElement);
     formValidator.enableValidation();
