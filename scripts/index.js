@@ -1,4 +1,4 @@
-import Card from './card.js'
+import {Card} from './Card.js'
 const openPopupBtn = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
 const popupExit = popup.querySelector('.popup__exit-btn');
@@ -7,18 +7,17 @@ const subtitle = document.querySelector('.profile__subtitle');
 const formElement = popup.querySelector('.popup__form');
 const popupName = formElement.querySelector('.popup__input_type_first-name');
 const popupNameSubtitle = formElement.querySelector('.popup__input_type_about-me');
-const templateGrid = document.querySelector('.grid-template').content;
 const gridContainer = document.querySelector('.grid');
 const popupGrid = document.querySelector('#popupAddCard');
 const popupGridImageName = document.querySelector('.popup__input_type_image-name');
 const popupGridLink = document.querySelector('.popup__input_type_link');
 const popupImageExit = document.querySelector('.popup__image-exit-btn');
-const popupImage = document.querySelector('#popupImage');
+export const popupImage = document.querySelector('#popupImage');
 const openGridPopupBtn = document.querySelector('.profile__button-add');
 const exitGridPopup = document.querySelector('.popup__grid-exit-btn');
 const popupAddImgSubmit = popupGrid.querySelector('.popup__form');
-const popupImageCard = popupImage.querySelector('.popup__image');
-const popupTextCard = popupImage.querySelector('.popup__image-text');
+export const popupImageCard = popupImage.querySelector('.popup__image');
+export const popupTextCard = popupImage.querySelector('.popup__image-text');
 const gridArray = [
     {
         name: 'Архыз',
@@ -45,47 +44,28 @@ const gridArray = [
         link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
 ];
-const getCardElement = (data) => {
-    const cardElement = templateGrid.cloneNode(true);
-    const likeButton = cardElement.querySelector('.grid__like');
-    const deleteButton = cardElement.querySelector('.grid__delete-btn');
-    const cardImage = cardElement.querySelector('.grid__image');
-    cardElement.querySelector('.grid__text').textContent = data.name;
-    likeButton.addEventListener('click', handleLikeButton);
-    deleteButton.addEventListener('click', handleDeleteCard);
-    cardImage.src = data.link
-    cardImage.alt = data.name;
-    cardImage.addEventListener('click', () => handleOpenPopupImage(data));
-    return cardElement;
-};
+gridArray.forEach((item) => {
+    const card = new Card(item, '.grid-template');
+    const gridElement = card._generateCard();
+    gridContainer.prepend(gridElement);
 
-function renderCard() {
-    gridArray.forEach(function (element) {
-        const newCard = getCardElement(element);
-        addNewCard(newCard);
-    })
+})
+
+
+
+
+
+function addNewCard() {
+    const data = {
+        name: popupGridImageName.value,
+        link: popupGridLink.value
+    }
+    const newCard = new Card(data, '.grid-template');
+    const newGridElement = newCard._generateCard();
+    gridContainer.prepend(newGridElement);
 }
 
-function addNewCard(element) {
-    gridContainer.prepend(element);
-}
-
-function handleDeleteCard(evt) {
-    evt.target.closest('.grid__items').remove();
-}
-
-function handleLikeButton(evt) {
-    evt.target.classList.toggle('grid__like_active');
-}
-
-function handleOpenPopupImage(data) {
-    popupImageCard.src = data.link;
-    popupImageCard.alt = data.name;
-    popupTextCard.textContent = data.name;
-    openPopup(popupImage);
-}
-
-function openPopup(popup) {
+export function openPopup(popup) {
     popup.classList.add('popup_active');
     document.addEventListener('keydown', closePopupKey)
 }
@@ -112,21 +92,16 @@ function handleFormSubmit(evt) {
     closePopup(popup);
 }
 
-function handleAddCard(evt) {
-    evt.preventDefault();
-    const newCard = getCardElement({
-        name: popupGridImageName.value,
-        link: popupGridLink.value
-    });
+function handleAddCard() {
+
+    addNewCard();
+    disableButton(cardFormSubmitButton , options);
     popupGridImageName.value = ''
     popupGridLink.value = ''
-    addNewCard(newCard);
-    disableButton(cardFormSubmitButton , options);
     closePopup(popupGrid);
 
 }
 
-renderCard()
 popupImageExit.addEventListener('click', () => {
     closePopup(popupImage);
 })
@@ -152,7 +127,6 @@ function closeByClick(event) {
         closePopup(activityPopup)
     }
 }
-
 function closePopupKey(evt) {
     if (evt.key === 'Escape') {
         const activityPopup = document.querySelector('.popup_active')
