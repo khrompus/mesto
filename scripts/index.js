@@ -1,6 +1,6 @@
 import {Card} from './Card.js'
 import {FormValidator} from "./FormValidator.js";
-
+const cardFormElement = document.querySelector('#AddCardForm');
 const popupForms = document.querySelectorAll('.popup__form');
 const openPopupBtn = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
@@ -57,21 +57,19 @@ const gridArray = [
     }
 ];
 gridArray.forEach((item) => {
-    const card = new Card(item, '.grid-template');
-    const gridElement = card._generateCard();
-    gridContainer.prepend(gridElement);
-
+    gridContainer.prepend(createCard(item));
 })
-
+function createCard(item) {
+    const card = new Card(item, '.grid-template');
+    return card._generateCard();
+}
 
 function addNewCard() {
     const data = {
         name: popupGridImageName.value,
         link: popupGridLink.value
     }
-    const newCard = new Card(data, '.grid-template');
-    const newGridElement = newCard._generateCard();
-    gridContainer.prepend(newGridElement);
+    gridContainer.prepend(createCard(data));
 }
 
 export function openPopup(popup) {
@@ -96,13 +94,15 @@ function handleFormSubmit(evt) {
     subtitle.textContent = popupNameSubtitle.value;
     closePopup(popup);
 }
+const addCardValidator = new FormValidator(options, cardFormElement);
+addCardValidator.enableValidation();
 
 function handleAddCard(event) {
     event.preventDefault()
     addNewCard();
     popupAddImgSubmit.reset()
-    addCardBtn.classList.add('popup__submit-btn_disable');
     closePopup(popupGrid);
+    addCardValidator.toggleButtonState();
 
 }
 

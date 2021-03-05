@@ -1,3 +1,4 @@
+import { popupImageCard, popupImage, popupTextCard, openPopup } from './index.js'
 export class Card {
     constructor(data, template) {
         this._name = data.name;
@@ -23,14 +24,15 @@ export class Card {
             this._deleteCard(evt);
         })
         this._elementPopupImage.addEventListener('click', () => {
-            openPopup(popupImage);
-            popupImageCard.src = this._link;
-            popupImageCard.alt = this._name
-            popupTextCard.textContent = this._name
-
+           this._handleCardClick();
         })
     }
-
+    _handleCardClick() {
+        openPopup(popupImage);
+        popupImageCard.src = this._link;
+        popupImageCard.alt = this._name
+        popupTextCard.textContent = this._name
+    }
     _generateCard() {
         this._element = this._getTemplate();
         this._gridImage = this._element.querySelector('.grid__image');
@@ -49,4 +51,3 @@ export class Card {
     }
 
 }
-import { popupImageCard, popupImage, popupTextCard, openPopup } from './index.js'

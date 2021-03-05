@@ -29,23 +29,23 @@ export class FormValidator {
         }
     }
 
-    _toggleButtonState() {
-        const Errors = !this._formElement.checkValidity()
-        this._buttonElement.disabled = Errors
-        this._buttonElement.classList.toggle(this._options.inactiveButtonClass, Errors)
+    toggleButtonState() {
+        const errors = !this._formElement.checkValidity()
+        this._buttonElement.disabled = errors
+        this._buttonElement.classList.toggle(this._options.inactiveButtonClass, errors)
     }
 
     _setEventListeners() {
         this._inputList = Array.from(this._formElement.querySelectorAll(this._options.inputSelector))
         this._buttonElement = this._formElement.querySelector(this._options.buttonElement)
-        this._toggleButtonState(this._formElement, this._buttonElement, this._options.inactiveButtonClass)
+        this.toggleButtonState(this._formElement, this._buttonElement, this._options.inactiveButtonClass)
         this._inputList.forEach((inputElement) => {
             inputElement.addEventListener('input', (evt) => {
                 this._checkInputValidity(inputElement)
             })
         })
         this._formElement.addEventListener("input", () => {
-                this._toggleButtonState(
+                this.toggleButtonState(
                     this._formElement,
                     this._buttonElement,
                     this._options.inactiveButtonClass
