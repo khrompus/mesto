@@ -1,6 +1,7 @@
 import {Card} from './Card.js'
 import {FormValidator} from "./FormValidator.js";
 const cardFormElement = document.querySelector('#AddCardForm');
+const profileFormElement = document.querySelector('#editForm');
 const popupForms = document.querySelectorAll('.popup__form');
 const openPopupBtn = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
@@ -87,11 +88,13 @@ const handlePopupActive = () => {
     popupName.value = title.textContent
     popupNameSubtitle.value = subtitle.textContent
 }
-
+const editProfileValidator = new FormValidator(options, profileFormElement);
+editProfileValidator.enableValidation();
 function handleFormSubmit(evt) {
     evt.preventDefault()
     title.textContent = popupName.value;
     subtitle.textContent = popupNameSubtitle.value;
+    editProfileValidator.toggleButtonState()
     closePopup(popup);
 }
 const addCardValidator = new FormValidator(options, cardFormElement);
@@ -140,8 +143,5 @@ function closePopupKey(evt) {
     }
 }
 
-popupForms.forEach((formElement) => {
-    const formValidator = new FormValidator(options, formElement);
-    formValidator.enableValidation();
-})
+
 
