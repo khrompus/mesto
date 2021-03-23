@@ -4,14 +4,11 @@ export default class UserInfo {
         this._nameSelector = document.querySelector(nameSelector);
         this._descriptionSelector = document.querySelector(descriptionSelector);
     }
-    // возвращает объект с данными пользователя.
-    // нужен, когда данные пользователя нужно будет подставить в форму при открытии.
     getUserInfo() {
-        return { name: this._nameSelector.textContent, description: this._descriptionSelector.textContent }
+        return {name : this._nameSelector.textContent, description: this._descriptionSelector.textContent }
     }
-    //принимает новые данные пользователя и добавляет их на страницу
-    setUserInfo(data) {
-        this._nameSelector.textContent = data.name;
-        this._descriptionSelector.textContent = data.description;
+    setUserInfo(item) {
+        this._nameSelector.textContent = item.name;
+        this._descriptionSelector.textContent = item.description;
     }
 }

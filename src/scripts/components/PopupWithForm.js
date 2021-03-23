@@ -15,14 +15,14 @@ export class PopupWithForm extends Popup {
             evt.preventDefault();
             this._handleFormSubmit(this._getInputValues());
             this.close();
+
         })
     }
-    _getInputValues() {//собирает данные всех полей формы
+    _getInputValues() {
         this._inputList = this._selector.querySelectorAll('.popup__input');
         this._formValues = {};
         this._inputList.forEach((input) => {
             this._formValues[input.name] = input.value
-            console.log(this._formValues)
         })
         return this._formValues;
 
