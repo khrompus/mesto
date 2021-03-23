@@ -1,9 +1,9 @@
-import { popupImageCard, popupImage, popupTextCard, openPopup } from './index.js'
 export class Card {
-    constructor(data, template) {
+    constructor(data, template, handleCardClick) {
         this._name = data.name;
         this._link = data.link;
         this._template = template
+        this._handleCardClick = handleCardClick
     }
     _getTemplate() {
         const cardElement = document
@@ -13,7 +13,7 @@ export class Card {
         return cardElement
     }
 
-    _setEventListeners() {
+    setEventListeners() {
         this._elementLike = this._element.querySelector('.grid__like');
         this._elementDelete = this._element.querySelector('.grid__delete-btn');
         this._elementPopupImage = this._element.querySelector('.grid__image');
@@ -24,14 +24,8 @@ export class Card {
             this._deleteCard(evt);
         })
         this._elementPopupImage.addEventListener('click', () => {
-           this._handleCardClick();
+            this._handleCardClick(this._link, this._name)
         })
-    }
-    _handleCardClick() {
-        openPopup(popupImage);
-        popupImageCard.src = this._link;
-        popupImageCard.alt = this._name
-        popupTextCard.textContent = this._name
     }
     _generateCard() {
         this._element = this._getTemplate();
@@ -40,7 +34,6 @@ export class Card {
         this._gridImage.src = this._link;
         this._gridImage.alt = this._name
         this._gridText.textContent = this._name
-        this._setEventListeners();
         return this._element
     }
     _likeCard(evt) {
