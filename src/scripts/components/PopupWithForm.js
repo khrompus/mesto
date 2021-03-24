@@ -7,11 +7,11 @@ export class PopupWithForm extends Popup {
     }
     close() {
         super.close();
-        this._selector.querySelector('.popup__form').reset();
+        this._popupElement.querySelector('.popup__form').reset();
     }
     setEventListeners() {
         super.setEventListeners();
-        this._selector.addEventListener('submit', (evt) => {
+        this._popupElement.addEventListener('submit', (evt) => {
             evt.preventDefault();
             this._handleFormSubmit(this._getInputValues());
             this.close();
@@ -19,7 +19,7 @@ export class PopupWithForm extends Popup {
         })
     }
     _getInputValues() {
-        this._inputList = this._selector.querySelectorAll('.popup__input');
+        this._inputList = this._popupElement.querySelectorAll('.popup__input');
         this._formValues = {};
         this._inputList.forEach((input) => {
             this._formValues[input.name] = input.value

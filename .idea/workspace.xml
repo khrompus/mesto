@@ -6,14 +6,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="hotfix:index.js">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/utils/constants.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/FormValidator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/FormValidator.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/Popup.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Popup.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/PopupWithForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/components/PopupWithImage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/PopupWithImage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +64,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vezer\mesto\src\pages" />
       <recent name="C:\Users\vezer\mesto\src" />
       <recent name="C:\Users\vezer\mesto\src\scripts\components" />
       <recent name="C:\Users\vezer\mesto" />
       <recent name="C:\Users\vezer\mesto\blocks\popup\_active" />
-      <recent name="C:\Users\vezer\mesto\blocks\popup" />
     </key>
   </component>
   <component name="RunManager">
@@ -178,6 +178,8 @@
       <workItem from="1616447492549" duration="6628000" />
       <workItem from="1616491826203" duration="11505000" />
       <workItem from="1616525307844" duration="6556000" />
+      <workItem from="1616544981759" duration="291000" />
+      <workItem from="1616580113054" duration="9067000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
@@ -313,14 +315,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1921" height="356" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1614895709142" />
-    <state x="551" y="150" key="SettingsEditor" timestamp="1614704611121">
+    <state x="551" y="150" key="SettingsEditor" timestamp="1616594600274">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="551" y="150" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1614704611121" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1616502868050">
+    <state x="551" y="150" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1616594600274" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1616581435632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616502868050" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1616581435632" />
     <state x="539" y="183" width="840" height="856" key="search.everywhere.popup" timestamp="1616452959649">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

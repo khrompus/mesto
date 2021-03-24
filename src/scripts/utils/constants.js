@@ -2,9 +2,12 @@ export const editProfileBtn = document.querySelector('.profile__button-edit')
 export const editInputName = document.querySelector('.popup__input_type_first-name')
 export const editInputDescription = document.querySelector('.popup__input_type_about-me')
 export const cardFormElement = document.querySelector('#AddCardForm');
+export const addCardPopup = document.querySelector('#popupAddCard')
 export const profileFormElement = document.querySelector('#editForm');
 export const gridContainer = '.grid';
 export const openGridPopupBtn = document.querySelector('.profile__button-add')
+export const openPopupEdit = document.querySelector('#popupEdit')
+export const popupImage = document.querySelector('#popupImage')
 export const options = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',
