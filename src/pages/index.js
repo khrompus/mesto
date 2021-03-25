@@ -16,7 +16,10 @@ import {editProfileBtn,
     gridArray,
     addCardPopup,
     openPopupEdit,
-    popupImage
+    popupImage,
+    template,
+    profileName,
+    profileDescription
 } from '../scripts/utils/constants';
 
 const addCardValidator = new FormValidator(options, cardFormElement);
@@ -28,19 +31,20 @@ const cardsList = new Sections({
         items: gridArray,
         renderer: (item) => {
             createCard(item)
+            cardsList.addItem(createCard(item));
         },
     },
     gridContainer
 );
+
 function createCard(item) {
-    const card = new Card(item, '.grid-template',
+    const card = new Card(item, template,
         (link, name) => {
             popupImg.open(link, name);
         }
     );
-    const cardElement = card._generateCard();
-    cardsList.addItem(cardElement);
-    card.setEventListeners()
+    const cardElement = card.generateCard();
+    return cardElement
 }
 
 const editProfileValidator = new FormValidator(options, profileFormElement);
@@ -62,7 +66,7 @@ const popupProfile = new PopupWithForm(
 
 
 popupProfile.setEventListeners();
-const userInfo = new UserInfo('.profile__title','.profile__subtitle')
+const userInfo = new UserInfo(profileName,profileDescription)
 editProfileBtn.addEventListener('click', (event) => {
     popupProfile.open(event);
     const user = userInfo.getUserInfo();
@@ -76,6 +80,7 @@ const popupAdd = new PopupWithForm(
     addCardPopup,
     (item) => {
         createCard(item)
+        cardsList.addItem(createCard(item));
     },
 );
 popupAdd.setEventListeners();

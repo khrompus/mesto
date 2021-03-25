@@ -6,6 +6,7 @@ export class FormValidator {
     _getErrorElement(inputElement) {
         return this._formElement.querySelector(`.${inputElement.id}-error`)
     };
+
     _showInputError(inputElement, errorMessage){
         const errorElement = this._getErrorElement(inputElement);
         inputElement.classList.add(this._options.inputErrorClass);
@@ -52,4 +53,6 @@ export class FormValidator {
     enableValidation() {
         this._setEventListeners()
     }
-}
+
+
+    }

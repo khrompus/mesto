@@ -8,6 +8,9 @@ export const gridContainer = '.grid';
 export const openGridPopupBtn = document.querySelector('.profile__button-add')
 export const openPopupEdit = document.querySelector('#popupEdit')
 export const popupImage = document.querySelector('#popupImage')
+export const template = document.querySelector('.grid-template')
+export const profileName = document.querySelector('.profile__title')
+export const profileDescription = document.querySelector('.profile__subtitle')
 export const options = {
     formSelector: '.popup__form',
     inputSelector: '.popup__input',

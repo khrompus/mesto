@@ -6,14 +6,13 @@ export class Card {
         this._handleCardClick = handleCardClick
     }
     _getTemplate() {
-        const cardElement = document
-            .querySelector(this._template).content
+        const cardElement = this._template.content
             .querySelector('.grid__items')
             .cloneNode(true);
         return cardElement
     }
 
-    setEventListeners() {
+    _setEventListeners() {
         this._elementLike = this._element.querySelector('.grid__like');
         this._elementDelete = this._element.querySelector('.grid__delete-btn');
         this._elementPopupImage = this._element.querySelector('.grid__image');
@@ -27,14 +26,16 @@ export class Card {
             this._handleCardClick(this._link, this._name)
         })
     }
-    _generateCard() {
+    generateCard() {
         this._element = this._getTemplate();
+        this._setEventListeners()
         this._gridImage = this._element.querySelector('.grid__image');
         this._gridText = this._element.querySelector('.grid__text');
         this._gridImage.src = this._link;
         this._gridImage.alt = this._name
         this._gridText.textContent = this._name
         return this._element
+
     }
     _likeCard(evt) {
         evt.target.classList.toggle('grid__like_active');
