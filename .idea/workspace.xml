@@ -6,26 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5798ed2b-af50-4c28-9232-d93bc5a8e9c4" name="Default Changelist" comment="hotfix:index.js">
-      <change afterPath="$PROJECT_DIR$/src/blocks/grid/__delete-btn/_disable/grid__delete-btn_disable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/grid/__element-group/grid__element-group.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/grid/__number-like/grid__number-like.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar-btn/profile__avatar-btn.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Vector.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/Vector.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/Api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/components/PopupWithConfirm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/grid/__like/grid__like.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/grid/__like/grid__like.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar/profile__avatar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__button-add/profile__button-add.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__button-add/profile__button-add.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/blocks/profile/__avatar-btn/profile__avatar-btn.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/profile/__avatar-btn/profile__avatar-btn.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/PopupWithForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/PopupWithForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/Sections.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/Sections.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/components/UserInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/utils/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/utils/constants.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +182,7 @@
       <workItem from="1616930529164" duration="15283000" />
       <workItem from="1617017543429" duration="10535000" />
       <workItem from="1617096536700" duration="24426000" />
+      <workItem from="1617142155157" duration="208000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1608585276767</created>
