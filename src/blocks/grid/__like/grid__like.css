@@ -3,15 +3,12 @@
     background-color: white;
     width: 21px;
     height: 21px;
-    background-repeat: no-repeat;
     margin-top: 26px;
+    background-repeat: no-repeat;
     transition: .3s linear;
     border: none;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: 12px;
     outline: none;
-
 }
 .grid__like:hover{
     opacity: 0.6;

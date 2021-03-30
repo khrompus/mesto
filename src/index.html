@@ -13,14 +13,16 @@
 <main>
 
     <section class="profile">
-        <img src="<%=require('../src/images/image.jpg')%>" alt="Аватар" class="profile__avatar">
+        <button type="button" class="profile__avatar-btn">
+        <img src="" alt="Аватар" class="profile__avatar">
+        </button>
         <div class="profile__container">
             <div class="profile__info">
                 <div class="profile__name">
-                    <h1 class="profile__title" id="some">Рахмаев Владислав</h1>
+                    <h1 class="profile__title" id="some"></h1>
                     <button class="profile__button-edit" type="button"></button>
                 </div>
-                <p class="profile__subtitle">Исследователь Кода</p>
+                <p class="profile__subtitle"></p>
             </div>
             <button class="profile__button-add" type="button"></button>
         </div>
@@ -40,7 +42,7 @@
         <form class="popup__form" name="edit" id="editForm" novalidate>
             <input placeholder="Имя" class="popup__input popup__input_type_first-name" id="firstName" type="text" name="name" required minlength="2" maxlength="40">
             <span class="popup__input-error firstName-error"></span>
-            <input placeholder="О себе" class="popup__input popup__input_type_about-me" type="text" id="aboutMe" name="description" required minlength="2" maxlength="200">
+            <input placeholder="О себе" class="popup__input popup__input_type_about-me" type="text" id="aboutMe" name="about" required minlength="2" maxlength="200">
             <span class="popup__input-error aboutMe-error"></span>
             <button class="popup__submit-btn" type="submit" name="firstNameInfo">Сохранить</button>
         </form>
@@ -63,18 +65,41 @@
             <span class="popup__input-error newMesto-error"></span>
             <input placeholder="Ссылка на картинку" class="popup__input popup__input_type_link" id="urlLink" type="url" name="link" pattern="https://.*" required>
             <span class="popup__input-error urlLink-error"></span>
+            <button class="popup__submit-btn" type="submit" name="addCardBtn">Создать</button>
+        </form>
+    </div>
+</section>
+<section class="popup" id="deleteCard">
+    <div class="popup__container">
+        <button class="popup__exit-btn popup__grid-exit-btn" type="button"></button>
+        <h2 class="popup__title">Вы уверены?</h2>
+        <form class="popup__form" id="deleteCardForm" name="deleteCard">
+            <button class="popup__submit-btn" type="submit" name="deleteCardBtn">Да</button>
+        </form>
+    </div>
+</section>
+<section class="popup" id="newImage">
+    <div class="popup__container">
+        <button class="popup__exit-btn popup__grid-exit-btn" type="button"></button>
+        <h2 class="popup__title">Обновить аватар</h2>
+        <form class="popup__form" id="newAvatarForm" name="addCardForm" novalidate>
+            <input placeholder="Ссылка на фото" class="popup__input"
+                    id="newNameInput" type="url" name="avatar" pattern="https://.*" required>
+            <span class="popup__input-error newNameInput-error"></span>
             <button class="popup__submit-btn" type="submit" name="addCardBtn">Сохранить</button>
         </form>
     </div>
 </section>
-
 <template class="grid-template" id="gridTemplate">
     <div class="grid__items">
         <img src="#" alt="#" class="grid__image">
         <button class="grid__delete-btn" type="button"></button>
         <div class="grid__text-group">
             <h2 class="grid__text" id="gridText"></h2>
+            <div class="grid__element-group">
             <button type="button" class="grid__like"></button>
+                <p class="grid__number-like"></p>
+            </div>
         </div>
     </div>
 </template>

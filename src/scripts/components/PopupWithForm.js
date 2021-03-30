@@ -1,15 +1,22 @@
-
 import {Popup} from './Popup.js';
-export class PopupWithForm extends Popup {
-    constructor(popupElement,handleFormSubmit) {
-        super(popupElement);
+export  class PopupWithForm extends Popup {
+    constructor(popupSelector, url, method, handleFormSubmit, api) {
+        super(popupSelector, api);
         this._handleFormSubmit = handleFormSubmit;
-
+        this._popupForm = this._popupElement.querySelector('.popup__form');
+        this._inputList = this._popupElement.querySelectorAll('.popup__input');
+        this._popupFormSubmit = this._popupForm.querySelector('.popup__submit-btn');
+        this._api = api;
+        this._url = url;
+        this._method = method;
     }
     close() {
         super.close();
-        this._popupElement.querySelector('.popup__form').reset();
+        this._popupForm.reset();
         this._resetValidator('.popup__input')
+    }
+    open() {
+        super.open();
     }
     _getInputList(inputElement){
         const errorElement = this._popupElement.querySelector(`.${inputElement.id}-error`)
@@ -24,29 +31,38 @@ export class PopupWithForm extends Popup {
             this._getInputList(inputElement)
         })
     }
-
     setEventListeners() {
         super.setEventListeners();
         this._popupElement.addEventListener('submit', (evt) => {
             evt.preventDefault();
-            this._handleFormSubmit(this._getInputValues());
-            this.close();
+            if (this._popupFormSubmit.textContent === 'Сохранить'){
+                this._popupFormSubmit.textContent = 'Сохранение...';
+            }
+            else {
+                this._popupFormSubmit.textContent = 'Создание...'
+            }
 
+            this._api.postInfo(this._url, this._method, this._getInputValues())
+                .then(res => {
+                    this._handleFormSubmit(res);
+                })
+                .catch(err => {
+                    console.log('Ошибка при сохранении', err);
+                })
+                .finally(() => {
+                        if (this._popupFormSubmit.textContent === 'Сохранение...'){
+                            this._popupFormSubmit.textContent = 'Сохранить'
+                        }else{
+                            this._popupFormSubmit.textContent = 'Создать'
+                        }
+                })
+
+            this.close();
         })
     }
-    // _resetValidator() {
-    //     this._inputError = this._popupElement.querySelector('.popup__input')
-    //     this._errorList = this._popupElement.querySelectorAll('.popup__input-error');
-    //     this._error
-    //         // this._errorList.textContent = "";
-    // }
     _getInputValues() {
-        this._inputList = this._popupElement.querySelectorAll('.popup__input');
         this._formValues = {};
-        this._inputList.forEach((input) => {
-            this._formValues[input.name] = input.value
-        })
+        this._inputList.forEach(input => this._formValues[input.name] = input.value);
         return this._formValues;
-
     }
 }

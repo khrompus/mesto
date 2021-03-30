@@ -3,9 +3,11 @@
     height: 120px;
     border-radius:100px;
     margin: 0;
+    transition: linear .3s;
+    display: flex;
+    position: relative;
 }
-@media screen and (max-width: 879px) {
-    .profile__avatar{
-        margin: auto;
-    }
+.profile__avatar:hover {
+    z-index: 0;
+    opacity: 0.2;
 }
