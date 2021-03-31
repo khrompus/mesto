@@ -1,18 +1,17 @@
 export default class Card {
-    constructor(item, cardSelector, api, myId, handleCardClick, handleCardDelete) {
+    constructor(item, cardSelector, handleCardClick, handleCardDelete, myId, isLikeByMe, handleLikeClick) {
         this._template = cardSelector;
         this._name = item.name;
         this._link = item.link;
         this._id = item._id;
-        this._likes = item.likes.length;
+        this._likes = item.likes
         this._owner = item.owner._id;
-        this.myId = myId;
-        this._like = item.likes.some(function (like) {
-            return like._id === myId;
-        });
         this._handleCardClick = handleCardClick;
-        this._handleCardDelete = handleCardDelete;
-        this._api = api;
+        this._myId = myId
+        this._handleCardDelete = handleCardDelete
+        this._handleLikeClick = handleLikeClick
+        this._isLikeByMe = isLikeByMe;
+        this._isLiked = false;
     }
         _getTemplate() {
          const cardElement = this._template.content
@@ -20,42 +19,17 @@ export default class Card {
              .cloneNode(true);
          return cardElement
      }
-    _toggleLikeElement(evt) {
-        if (!this._like) {
-            this._api.likeCard({_id: this._id})
-                .then(data => {
-                    this._likes += 1;
-                    this._like = !this._like;
-                    this._element.querySelector('.grid__number-like').textContent = this._likes;
-                    this._element.querySelector('.grid__like').classList.add('grid__like_active');
-                })
-                .catch(err => {
-                    console.log('Ошибка при установке лайка', err.message);
-                });
-        } else {
-            this._api.likeCardDelete({_id: this._id})
-                .then(data => {
-                    if (this._likes > 0) {
-                        this._likes -= 1
-                    };
-                    this._like = !this._like;
-                    this._element.querySelector('.grid__number-like').textContent = this._likes;
-                    this._element.querySelector('.grid__like').classList.remove('grid__like_active');
-                })
-                .catch(err => {
-                    console.log('Ошибка при удалении лайка', err.message);
-                });
-        }
-        evt.stopPropagation();
-    }
     _setEventListeners() {
-        this._element.querySelector('.grid__like').addEventListener('click', (event) => {
-            this._toggleLikeElement(event);
+        this._likeBtn = this._element.querySelector('.grid__like')
+        this._likeBtn.addEventListener('click', (evt) => {
+            evt.target.classList.toggle('grid__like_active');
+            this._handleLikeClick(this._isLiked, this._setLikesCount.bind(this), this._switchLike.bind(this));
         });
         this._element.querySelector('.grid__delete-btn').addEventListener('click', (event) => {
             this._handleCardDelete(this._id, this._element);
         });
-        this._elementPopupImage = this._element.querySelector('.grid__image');
+
+    this._elementPopupImage = this._element.querySelector('.grid__image');
         this._elementPopupImage.addEventListener('click', () => {
              this._handleCardClick(this._link, this._name)
        })
@@ -63,18 +37,29 @@ export default class Card {
     generateCard() {
         this._element = this._getTemplate();
         this._element.querySelector('.grid__text').textContent = this._name;
-        this._element.querySelector('.grid__number-like').textContent = this._likes;
+        this._setLikesCount(this._likes.length);
+        this._isLiked = this._isLikeByMe(this._likes);
         this._deleteCardBtn = this._element.querySelector('.grid__delete-btn');
         const elementImg = this._element.querySelector('.grid__image');
-        if (this._like) {
-            this._element.querySelector('.grid__like').classList.add('grid__like_active');
-        }
-        if (!(this._owner === this.myId)) {
-            this._deleteCardBtn.classList.add('grid__delete-btn_disable');
-        }
         elementImg.src = this._link;
         elementImg.alt = this._name;
+        if(this._isLiked){
+            this._element.querySelector('.grid__like').classList.add('grid__like_active');
+        };
+        if (!(this._myId === this._owner)){
+            this._element.querySelector('.grid__delete-btn').classList.add('grid__delete-btn_disable')
+        }
         this._setEventListeners();
         return this._element;
+    }
+    _switchLike() {
+        this._isLiked = !this._isLiked;
+    }
+    _setLikesCount(likesNumber) {
+        this._element.querySelector('.grid__number-like').textContent = likesNumber;
+    }
+    deleteCard() {
+        this._element.remove();
+        console.log(this._element)
     }
 }

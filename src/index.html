@@ -44,7 +44,7 @@
                    name="name" required minlength="2" maxlength="40">
             <span class="popup__input-error firstName-error"></span>
             <input placeholder="О себе" class="popup__input popup__input_type_about-me" type="text" id="aboutMe"
-                   name="about" required minlength="2" maxlength="200">
+                   name="description" required minlength="2" maxlength="200">
             <span class="popup__input-error aboutMe-error"></span>
             <button class="popup__submit-btn" type="submit" name="firstNameInfo">Сохранить</button>
         </form>
@@ -87,7 +87,7 @@
         <h2 class="popup__title">Обновить аватар</h2>
         <form class="popup__form" id="newAvatarForm" name="addCardForm" novalidate>
             <input placeholder="Ссылка на фото" class="popup__input"
-                   id="newNameInput" type="url" name="avatar" pattern="https://.*" required>
+                   id="newNameInput" type="url" name="link" pattern="https://.*" required>
             <span class="popup__input-error newNameInput-error"></span>
             <button class="popup__submit-btn" type="submit" name="addCardBtn">Сохранить</button>
         </form>

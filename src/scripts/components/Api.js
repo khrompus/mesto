@@ -9,17 +9,22 @@ export default class Api {
         }
         return Promise.reject(new Error(`Произошла ошибка со статус-кодом ${res.status}`));
     }
-    postInfo(url, method, data) {
-        return fetch(`${this._baseUrl}${url}`, {
-            method: method,
+    sendProfile(body) {
+        return fetch(`${this._baseUrl}/users/me`, {
+            method: 'PATCH',
             headers: {
-                authorization: this._authorization,
+                authorization: `${this._authorization}`,
                 'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(
-                data
-            ),
-        })
+            }, body})
+            .then(res => this._parseResponse(res));
+    }
+    sendCard(body) {
+        return fetch(`${this._baseUrl}/cards`, {
+            method: 'POST',
+            headers: {
+                authorization: `${this._authorization}`,
+                'Content-Type': 'application/json'
+            }, body})
             .then(res => this._parseResponse(res));
     }
     getUser() {
@@ -50,7 +55,16 @@ export default class Api {
         })
             .then(res => this._parseResponse(res));
     }
-    likeCard({ _id }) {
+    changeAvatar(body) {
+        return fetch(`${this._baseUrl}/users/me/avatar`, {
+            method: 'PATCH',
+            headers: {
+                authorization: `${this._authorization}`,
+                'Content-Type': 'application/json'
+            }, body})
+            .then(res => this._parseResponse(res));
+    }
+    likeCard(_id) {
         return fetch(`${this._baseUrl}/cards/likes/${_id}`, {
             method: 'PUT',
             headers: {
@@ -60,7 +74,7 @@ export default class Api {
         })
             .then(res => this._parseResponse(res));
     }
-    likeCardDelete({ _id }) {
+    likeCardDelete(_id) {
         return fetch(`${this._baseUrl}/cards/likes/${_id}`, {
             method: 'DELETE',
             headers: {

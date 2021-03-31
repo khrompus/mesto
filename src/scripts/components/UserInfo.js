@@ -9,13 +9,13 @@ export default class UserInfo {
          avatar: this._profileAvatar.src
         }
     }
-    getUserId() {
-        return this.id;
+    getMyId(){
+        return this._myId
     }
-    setUserInfo(item) {
-        this._nameSelector.textContent = item.name;
-        this._descriptionSelector.textContent = item.about;
-        this._profileAvatar.src = item.avatar
-        this.id = item._id
+    setUserInfo(data) {
+        this._nameSelector.textContent = data.name;
+        this._descriptionSelector.textContent = data.about;
+        this._profileAvatar.src = data.avatar
+        this._myId = data._id
     }
 }
