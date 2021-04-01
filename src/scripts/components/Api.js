@@ -64,21 +64,21 @@ export default class Api {
             }, body})
             .then(res => this._parseResponse(res));
     }
-    likeCard(_id) {
+    likeCard({ _id }) {
         return fetch(`${this._baseUrl}/cards/likes/${_id}`, {
             method: 'PUT',
             headers: {
-                authorization: this._authorization,
+                authorization: `${this._authorization}`,
                 'Content-Type': 'application/json'
             }
         })
             .then(res => this._parseResponse(res));
     }
-    likeCardDelete(_id) {
+    likeCardDelete({ _id }) {
         return fetch(`${this._baseUrl}/cards/likes/${_id}`, {
             method: 'DELETE',
             headers: {
-                authorization: this._authorization,
+                authorization: `${this._authorization}`,
                 'Content-Type': 'application/json'
             }
         })

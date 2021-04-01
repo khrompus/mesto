@@ -40,11 +40,40 @@ export const userInfo = new UserInfo(profileName,profileDescription,avatar)
 
 export const api = new Api(config)
 
-function handleFormDelete() {
-    api.deleteCard({ _id: this._idCard })
+function handleLikeCard(evt) {
+        if (!this._like) {
+            api.likeCard({ _id: this._id })
+                .then(data => {
+
+                    this._likes += 1;
+                    this._like = !this._like;
+                    this._element.querySelector('.grid__number-like').textContent = this._likes;
+                    this._element.querySelector('.grid__like').classList.add('grid__like_active');
+                })
+                .catch(err => {
+                    console.log('Ошибка при установке лайка', err.message);
+                });
+        } else {
+            api.likeCardDelete({ _id: this._id })
+                .then(data => {
+                    // изменить число лайков
+                    if (this._likes > 0) { this._likes -= 1 }
+                    this._like = !this._like;
+                    this._element.querySelector('.grid__number-like').textContent = this._likes;
+                    this._element.querySelector('.grid__like').classList.remove('grid__like_active');
+                })
+                .catch(err => {
+                    console.log('Ошибка при удалении лайка', err.message);
+                });
+        }
+        evt.stopPropagation();
+}
+
+function handleFormDelete() {   // не совсем понял как переместить этот хендлер в creatCard , но сейчас эти свойства не являются приватными.
+    api.deleteCard({ _id: this.idCard })
         .then(res => {
-            this._elementCard.remove();
-            this._elementCard = null;
+            this.elementCard.remove();
+            this.elementCard = null;
         })
         .catch(err => {
             console.log('Ошибка при удалении карточки', err);
@@ -54,7 +83,7 @@ function handleFormDelete() {
 
 }
 
-function handleFormSubmit (evt, data) {
+function handleEditProfileFormSubmit (evt, data) {
     evt.preventDefault();
     isLoading(profileFormElement,true,'Сохранение...')
     const body = JSON.stringify({
@@ -76,7 +105,7 @@ function handleFormSubmit (evt, data) {
         });
 }
 
-function handleFormSubmitSecond(evt, data) {
+function handleAddCardFormSubmit(evt, data) {
     evt.preventDefault();
     isLoading(cardFormElement,true,'Создание...')
     const body = JSON.stringify({
@@ -132,37 +161,7 @@ function createCard(item) {
             popupDelete.open(id, element);
         },
         myId,
-        (likes) => likes.some( (user) => {
-            return userId === user._id;
-        }),(isLiked, setLikesCount, switchLike) => {
-            if(isLiked) {
-                api.likeCardDelete(item._id)
-                    .then((result) => {
-                        console.log(result);
-
-                        const { likes } = result;
-
-                        setLikesCount(likes.length);
-                        switchLike();
-                    })
-                    .catch( (err) => {
-                        console.log(err);
-                    });
-            } else {
-                api.likeCard(item._id)
-                    .then((result) => {
-                        console.log(result);
-
-                        const { likes } = result;
-
-                        setLikesCount(likes.length);
-                        switchLike();
-                    })
-                    .catch( (err) => {
-                        console.log(err);
-                    });
-            }
-        }
+        handleLikeCard
     );
     const cardElement = card.generateCard();
     return cardElement
@@ -183,13 +182,13 @@ popupEditAvatar.setEventListeners();
 
 const popupProfile = new PopupWithForm(
     openPopupEdit,
-   handleFormSubmit
+    handleEditProfileFormSubmit
 );
 popupProfile.setEventListeners();
 
 const popupAdd = new PopupWithForm(
     addCardPopup,
-    handleFormSubmitSecond
+    handleAddCardFormSubmit
 );
 popupAdd.setEventListeners();
                                                             // end popup's

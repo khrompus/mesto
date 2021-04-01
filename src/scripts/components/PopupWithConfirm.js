@@ -17,8 +17,8 @@ export default class PopupWithConfirm extends Popup {
     }
 
     open(id,element) {
-        this._idCard = id;
-        this._elementCard = element;
+        this.idCard = id;
+        this.elementCard = element;
         super.open();
     }
 }

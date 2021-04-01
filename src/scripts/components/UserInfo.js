@@ -13,9 +13,25 @@ export default class UserInfo {
         return this._myId
     }
     setUserInfo(data) {
-        this._nameSelector.textContent = data.name;
-        this._descriptionSelector.textContent = data.about;
-        this._profileAvatar.src = data.avatar
-        this._myId = data._id
+        if(data.name){
+            this._nameSelector.textContent = data.name;
+        }else {
+            console.log ('Произошла ошибка в смене имени')
+        }
+        if (data.about){
+            this._descriptionSelector.textContent = data.about;
+        }else{
+            console.log ('Произошла ошибка в смене информации о себе')
+        }
+        if(data.avatar){
+            this._profileAvatar.src = data.avatar
+        }else{
+            console.log ('Произошла ошибка в смене аватара')
+        }
+        if(data._id){
+            this._myId = data._id
+        }else{
+            console.log ('Произошла ошибка, не найдено id')
+        }
     }
 }
