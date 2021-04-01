@@ -44,7 +44,8 @@ export default class Card {
         elementImg.alt = this._name;
         this._element.querySelector('.grid__number-like').textContent = this._likes;
         if (this._like) {
-            this._element.querySelector('.grid__like').classList.add('grid__like_active');
+            this._element.querySelector('.grid__like').classList.add('grid__like_active');// без повторного поиска ,слетает рендер карточки и выходит ошибка в консоль.
+                                                                                                    // Пытался исправить разными методами , ничего не получилось.
         }
         elementImg.src = this._link;
         elementImg.alt = this._name;
