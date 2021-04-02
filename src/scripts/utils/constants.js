@@ -4,6 +4,7 @@ export const editInputDescription = document.querySelector('.popup__input_type_a
 export const cardFormElement = document.querySelector('#AddCardForm');
 export const addCardPopup = document.querySelector('#popupAddCard')
 export const profileFormElement = document.querySelector('#editForm');
+export const deleteFormElement = document.querySelector('#deleteCard')
 export const gridContainer = '.grid'
 export const containerWithCard = document.querySelector('.grid')
 export const openGridPopupBtn = document.querySelector('.profile__button-add')
