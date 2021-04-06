@@ -15,7 +15,7 @@
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(-webkit-min-content,282px));grid-template-columns:repeat(auto-fit,minmax(min-content,282px));grid-column-gap:17px;grid-row-gap:20px;margin:50px auto;max-width:880px;justify-content:center}@media screen and (max-width:879px){.grid{margin:50px 0}}
 .grid__items{min-height:361px;min-width:282px;background:#fff;border-radius:10px;padding:0;display:flex;flex-direction:column;overflow:hidden}
 .grid__image{width:282px;height:282px;border-radius:10px 10px 0 0;display:flex;cursor:pointer;transition:.3s linear}.grid__image:hover{transform:scale(1.1)}
-.grid__delete-btn{border:none;outline:none;background:url(a274c87c0f6b553b47ad.svg);width:18px;height:19.2px;z-index:2;position:absolute;margin-left:250px;margin-top:18px;cursor:pointer;transition:.3s linear;justify-content:end;background-repeat:no-repeat}.grid__delete-btn:hover{opacity:.6}
+.grid__delete-btn{border:none;outline:none;background:url(2af49b82d305a6ea3442.svg);width:18px;height:19.2px;z-index:2;position:absolute;margin-left:250px;margin-top:18px;cursor:pointer;transition:.3s linear;justify-content:end;background-repeat:no-repeat}.grid__delete-btn:hover{opacity:.6}
 .grid__text{text-overflow:ellipsis;white-space:nowrap;overflow:hidden;color:#000;font-style:normal;font-weight:900;font-size:24px;line-height:29px;margin:25px 0 0 21px;max-width:185px}
 .grid__text-group{display:flex;flex-wrap:nowrap;align-items:center;width:100%}
 .grid__like{background-image:url(df0c965524717a3fd8e9.svg);background-color:#fff;width:21px;height:21px;margin-top:26px;background-repeat:no-repeat;transition:.3s linear;border:none;cursor:pointer;outline:none}.grid__like:hover{opacity:.6}
